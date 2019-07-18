@@ -36,6 +36,8 @@ public class Main {
         // 1
         System.out.println(f1.comparar(f2));
         
+        System.out.println();
+        
         //Punto3
         Contador c = new Contador("test");
         for (int i = 0; i < 10; ++i){
