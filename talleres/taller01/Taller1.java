@@ -9,7 +9,7 @@ package taller1;
  *
  * @author SanHidalgo
  */
-public class Taller1 {
+public class Main {
 
     /**
      * @param args the command line arguments
