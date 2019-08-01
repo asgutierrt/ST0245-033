@@ -75,6 +75,8 @@ public class Main {
 		System.out.println("");
 		Taller3.permutation("abc");
                 System.out.println("");
+		System.out.println("Permutaciones 'abcd' para desencriptar el archivo");
+		Taller3.permutation("abcd");
 /*
 		System.out.println("Las permutaciones de la cadena 'Hola' son:");
 		System.out.println("Hola, Hoal, Hloa, Hlao, Haol, Halo, oHla, oHal, olHa, olaH, oaHl, oalH, lHoa, lHao, loHa, loaH, laHo, laoH, aHol, aHlo, aoHl, aolH, alHo, aloH");
