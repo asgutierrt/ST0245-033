@@ -78,7 +78,7 @@ public class Taller3 {
     private static void permutationAux(String prefix, String str) {
       if(str.length()== 0){
           System.out.print(prefix + ", ");
-          System.out.println(AdvancedEncryptionStandard.desencriptarArchivo(prefix)); //Imprime archivo encriptado si la contraseña es correcta
+          System.out.println(AdvancedEncryptionStandard.desencriptarArchivo(prefix)); //Imprime archivo encriptado si la contraseña es correcta para permutaciones de la palabra 'abcd'
       }else{
           for (int i = 0; i < str.length(); i++) {
               permutationAux(prefix+str.charAt(i), str.substring(0,i)+str.substring(i+1));
