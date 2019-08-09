@@ -57,7 +57,24 @@ public class Main {
 	        else
 	        System.out.println("Ejercicio 1 Incorrecto");
 	        
-                
+                int [] a= new int[] {12,324,43,2,3,43,2,3,43,3,2,343,2,43,55,67,68,86,3,4,56,7,6,45,8,4,34,8,7,5,34,7,78,9,
+                1,2,3,4,5,5,12,324,43,2,3,43,2,3,43,3,2,343,2,43,55,67,68,86,3,4,56,7,6,45,8,4,34,8,7,5,34,7,78,9,
+                1,2,3,4,5,5,12,324,43,2,3,43,2,3,43,3,2,343,2,43,55,67,68,86,3,4,56,7,6,45,8,4,34,8,7,5,34,7,78,9,
+                1,2,3,4,5,5,12,324,43,2,3,43,2,3,43,3,2,343,2,43,55,67,68,86,3,4,56,7,6,45,8,4,34,8,7,5,34,7,78,9,
+                1,2,3,4,5,5};
+		for (int i =100; i<160; i++) {
+		    int[] b = new int[i];
+		    int k = 0;
+		    for (int j = 0; j < i; j++) {
+			b[j] = a[k];
+			k++;
+		    }
+		    long start = System.currentTimeMillis();
+		    int w = Taller4.arrayMax(b, b.length-1);
+		    long exit = System.currentTimeMillis();
+		    long time = exit - start;
+		    System.out.println(time);
+		}
                 
 	      //Ejercicio2
 	        if(ejercicio2())
@@ -65,7 +82,19 @@ public class Main {
 	        else
 	        System.out.println("Ejercicio 2 Incorrecto");
 	        
-                
+                for (int i =16; i<26; i++) {
+		    int[] b = new int[i];
+		    int k = 0;
+		    for (int j = 0; j < i; j++) {
+			b[j] = a[k];
+			k++;
+		    }
+		    long start = System.currentTimeMillis();
+		    boolean w = Taller4.groupSum(0, b , 8);
+		    long exit = System.currentTimeMillis();
+		    long time = exit - start;
+		    System.out.println(time);
+		}
                 
 	        
 	        //Ejercicio3
