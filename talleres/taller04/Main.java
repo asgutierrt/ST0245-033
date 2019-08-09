@@ -103,14 +103,15 @@ public class Main {
 	        else
 	        System.out.println("Ejercicio 3 Incorrecto");
                 
-                
-                for (int i=30; i<45; i++){
-                    long start = System.currentTimeMillis();
-                    long a = Taller4.fibonacci(i);
-                    long exit = System.currentTimeMillis();
-                    long time = exit-start;
-                    System.out.println(time);
-                }
+           //Ciclo de determina el tiempo en milisegundos dado un n (n está en el intervalo [30,49])
+              for (int i = 30; i < 50 ; i++) {
+           	 long start = System.currentTimeMillis();
+            	long a = Taller4.fibonacci(i);
+            	long exit = System.currentTimeMillis();
+            	long time = exit - start;
+            	System.out.println(time);
+              }
+             
                 
 	    }
    
