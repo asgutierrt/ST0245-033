@@ -49,7 +49,7 @@ public class Main {
             
             	for (int i = 15840; i < 15870; i++) {
                	 	long start = System.nanoTime();
-                	Taller4.sumArray(arrayretorno(i), i-1);
+                	Taller4.arrayMax(arrayretorno(i), i-1);
                 	long end = System.nanoTime();
 			System.out.println(end - start);
            	 }
