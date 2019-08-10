@@ -47,7 +47,7 @@ public class Main {
 		
 		//ciclo para determinar tiempos
             
-            	for (int i = 15840; i < 15870; i++) {
+            	for (int i = 100; i < 120; i++) {
                	 	long start = System.nanoTime();
                 	Taller4.arrayMax(arrayretorno(i), i-1);
                 	long end = System.nanoTime();
@@ -69,7 +69,7 @@ public class Main {
 		    int[] b = new int[i];
 		    int k = 0;
 		    for (int j = 0; j < i; j++) {
-			b[j] = a[k];
+			b[j] = b[k];
 			k++;
 		    }
 		    long start = System.currentTimeMillis();
