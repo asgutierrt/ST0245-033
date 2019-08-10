@@ -52,29 +52,22 @@ public class Main {
 	    
 	    public static void main(String[] args){
 	        //Ejercicio1
-	        if(ejercicio1())
+	        if(ejercicio1()){
 	            System.out.println("Ejercicio 1 Correcto");
-	        else
-	        System.out.println("Ejercicio 1 Incorrecto");
-	        
-                int [] a= new int[] {12,324,43,2,3,43,2,3,43,3,2,343,2,43,55,67,68,86,3,4,56,7,6,45,8,4,34,8,7,5,34,7,78,9,
-                1,2,3,4,5,5,12,324,43,2,3,43,2,3,43,3,2,343,2,43,55,67,68,86,3,4,56,7,6,45,8,4,34,8,7,5,34,7,78,9,
-                1,2,3,4,5,5,12,324,43,2,3,43,2,3,43,3,2,343,2,43,55,67,68,86,3,4,56,7,6,45,8,4,34,8,7,5,34,7,78,9,
-                1,2,3,4,5,5,12,324,43,2,3,43,2,3,43,3,2,343,2,43,55,67,68,86,3,4,56,7,6,45,8,4,34,8,7,5,34,7,78,9,
-                1,2,3,4,5,5};
-		for (int i =100; i<160; i++) {
-		    int[] b = new int[i];
-		    int k = 0;
-		    for (int j = 0; j < i; j++) {
-			b[j] = a[k];
-			k++;
-		    }
-		    long start = System.currentTimeMillis();
-		    int w = Taller4.arrayMax(b, b.length-1);
-		    long exit = System.currentTimeMillis();
-		    long time = exit - start;
-		    System.out.println(time);
+		
+		//ciclo para determinar tiempos
+            
+            	for (int i = 15840; i < 15870; i++) {
+               	 	long start = System.nanoTime();
+                	Taller4.sumArray(arrayretorno(i), i-1);
+                	long end = System.nanoTime();
+			System.out.println(end - start);
+           	 }
 		}
+	        else{
+	        System.out.println("Ejercicio 1 Incorrecto");
+		}
+	      
                 
 	      //Ejercicio2
 	        if(ejercicio2())
@@ -114,6 +107,16 @@ public class Main {
              
                 
 	    }
+	
+	//Metodo para crear arreglos aleatorios
+    public static int[] arrayretorno(int tam) {
+        int[] array = new int[tam];
+        Random ra = new Random();
+        for (int i = 0; i < tam; i++) {
+            array[i] = ra.nextInt(10);
+        }
+        return array;
+    }
    
     
 }
