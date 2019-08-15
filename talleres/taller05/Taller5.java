@@ -25,8 +25,8 @@ public class Taller5 {
     public static void mul(int num) {
         for (int i = 1; i <= num; i++) {
             for (int j = 1; j <= num; j++) {
-                //System.out.println(i+ " X "+ j + " = "+ (i*j));
-                int a = i * j;
+                System.out.println(i+ " X "+ j + " = "+ (i*j));
+               // int a = i * j;
             }
             // System.out.println("");
         }
