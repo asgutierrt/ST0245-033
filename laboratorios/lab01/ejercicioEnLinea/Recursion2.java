@@ -23,5 +23,25 @@ public class Recursion2 {
     }
     
     //groupSum5
+    public boolean groupSum5(int start, int[] nums, int target) {
+        return groupSum5Aux (0,nums,target);
+    }
+
+    public boolean groupSum5Aux(int start, int[] nums, int target) {
+        if (start<nums.length-1){
+            if (nums[start]%5==0 & nums[start+1]!=1) return groupSum5Aux (start+1,nums,target-nums[start]);
+            if (nums[start]%5==0 & nums[start+1]==1) return groupSum5Aux (start+2,nums,target-nums[start]);
+        }
+
+        if (start==nums.length){
+            if (target ==0) return true;
+            else return false;
+        }
+
+        return groupSum5Aux(start+1, nums, target-nums[start])||
+               groupSum5Aux(start+1, nums, target);
+    }
+    
+    //groupNoAdj
     
 }
