@@ -62,7 +62,12 @@ public class Recursion1 {
         else return count8(n/10);
     }
     
-    //5. sumDigits 
+     /**
+     * 5. sumDigits 
+     * 
+     * @param n es un número cualquiera
+     * @return la suma de los digitos del número dado
+     */
     public int sumDigits(int n) {
         if(n<10)return n;     //T(n)= c_1
         else{
