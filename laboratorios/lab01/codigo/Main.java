@@ -1,43 +1,43 @@
 package laboratorio;
 
 /**
- * Clase que contiene las pruebas de los ejercicios del Laboratorio
+ * tests for Lab 1 code exercises
  * 
  * @author Santiago Hidalgo Ocampo
  * @author Ana Gutierrez
- * @version Versión 1
+ * @version Version 1
  */
 public class Main {
 
     public static void main(String[] args) {
-        //Ejercicio 1
+        //exercise 1
         ejercicio1(); // ADN
 
-        //Ejercicio2
-        ejercicio2(); //Rectangulos...
+        //exercise 2
+        ejercicio2(); //Rectangles...
     }
 
-    //Pruebas Ejercicio 1 (ADN
+    //tests exercise 1: ADN
     public static void ejercicio1() {
-        System.out.println("Ejercicio número 1: ");
-        System.out.println("Ejemplo 1: ");
+        System.out.println("exercise number 1: ");
+        System.out.println("example 1: ");
         String x = "ATAMOS";
         String y = "MATAMOSCAS";
-        System.out.println(x + " , " + y + "\n La longitud de la subsecuencia más larga entre las dos cadenas es: " + Laboratorio.lcs(x, y));
+        System.out.println(x + " , " + y + "\n The length of the longest sub-sequence between the two chains is: " + Laboratorio.lcs(x, y));
         System.out.println("");
-        System.out.println("Ejemplo 2: ");
+        System.out.println("example 2: ");
         String a = "AGGTAB";
         String b = "GXTXAYB";
-        System.out.println(a + " , " + b + "\n La longitud de la subsecuencia más larga entre las dos cadenas es: " + Laboratorio.lcs(a, b));
+        System.out.println(a + " , " + b + "\n The length of the longest sub-sequence between the two chains is: " + Laboratorio.lcs(a, b));
         System.out.println("\n");
     }
 
-    //Pruebas ejercicio 2 (Rectangulos)
+    //tests exercise 2 (Rectangles)
     public static void ejercicio2() {
-        System.out.println("Ejercicio 2: ");
+        System.out.println("Exercise 2: ");
         for (int i = 1; i < 7; i++) {
-            System.out.println("Para un rectangulo de medidas 2x"+i+" se puede \"rellenar\" de "+ 
-                    Laboratorio.nRectangulos(i)+ " maneras con rectangulos de 2x1");
+            System.out.println("A rectangle of measures 2x"+i+" can be \"fill\" in "+ 
+                    Laboratorio.nRectangulos(i)+ " ways with 2x1 rectangles");
         }
     }
 }
