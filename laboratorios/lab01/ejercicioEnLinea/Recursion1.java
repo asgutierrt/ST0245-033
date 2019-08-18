@@ -44,7 +44,7 @@ public class Recursion1 {
         if(n<10)return n;     //c_1
         else{
             int modulo = n%10;
-            return modulo+sumDigits(n/10);  //c_2 + T(n)
+            return modulo+sumDigits(n/10);  //c_2 + T(n/10)
         }
     }
 }
