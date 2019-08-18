@@ -42,6 +42,18 @@ public class Recursion2 {
                groupSum5Aux(start+1, nums, target);
     }
     
-    //groupNoAdj
+    //splitArray
+     public static boolean splitArray(int[] nums) {
+        return splitAux(0, 0, 0, nums);
+    }
+
+    public static boolean splitAux(int start, int sum1, int sum2, int[] nums) {
+        if (start == nums.length) {
+            return sum1 == sum2;
+        } else {
+            return splitAux(start + 1, sum1 + nums[start], sum2, nums)
+                    || splitAux(start + 1, sum1, sum2 + nums[start], nums);
+        }
+    }
     
 }
