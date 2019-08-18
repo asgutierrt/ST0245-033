@@ -8,43 +8,43 @@ package codingbat_recursion;
  */
 public class Recursion1 {
     
-    //count7 
+    //1. count7 
     public int count7(int n) {
-        if(n==0)  return 0;   
+        if(n==0)  return 0;       //c_1
 
-        if(n%10==7) return count7(n/10)+1;
-        else  return count7(n/10);
+        if(n%10==7) return count7(n/10)+1;   //c_2 + T(n/10)
+        else  return count7(n/10);           
     }
     
-    //countX 
+    //2. countX 
     public int countX(String str) {
-        if(str.equals(""))return 0;
+        if(str.equals(""))return 0;        //c_1
         
-        if(str.charAt(0)=='x') return countX(str.substring(1))+1;
+        if(str.charAt(0)=='x') return countX(str.substring(1))+1;   //c_2 + T(n-1)
         else return countX(str.substring(1));
     }
     
-    //triangle 
+    //3. triangle 
     public int triangle(int rows) {
-        if(rows==1 || rows==0) return rows;
-        else  return rows + triangle(rows-1);
+        if(rows==1 || rows==0) return rows;   //c_1
+        else  return rows + triangle(rows-1);   //c_2 + T(n-1)
     }
     
-    //count8 
+    //4. count8 
     public int count8(int n) {
-        if(n<1)return 0;
+        if(n<1)return 0;       //c_1
         
-        if (n % 10 == 8 && (n / 10) % 10 == 8) return count8(n/10)+2;
+        if (n % 10 == 8 && (n / 10) % 10 == 8) return count8(n/10)+2;   //c_2 + T(n/10)
         else if(n%10==8) return count8(n/10)+1;
         else return count8(n/10);
     }
     
-    //sumDigits 
+    //5. sumDigits 
     public int sumDigits(int n) {
-        if(n<10)return n;
+        if(n<10)return n;     //c_1
         else{
             int modulo = n%10;
-            return modulo+sumDigits(n/10);
+            return modulo+sumDigits(n/10);  //c_2 + T(n)
         }
     }
 }
