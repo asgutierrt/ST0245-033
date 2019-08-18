@@ -22,7 +22,13 @@ public class Recursion1 {
         else  return count7(n/10);           
     }
     
-    //2. countX 
+   /**
+     * 2. countX 
+     * 
+     * @param str es una cadena de caracteres 
+     * @return La cantidad de ocurrencias de 'x' en la cadena dada
+     */
+    
     public int countX(String str) {
         if(str.equals(""))return 0;        //T(n)= c_1
         
