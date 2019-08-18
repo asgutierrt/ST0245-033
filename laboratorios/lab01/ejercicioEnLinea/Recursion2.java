@@ -7,7 +7,7 @@ package codingbat_recursion;
  * @author sanhidalgoo
  */
 public class Recursion2 {
-    //splitOdd10 
+    //1. splitOdd10 
     public boolean splitOdd10(int[] nums) {
         return splitOdd10Aux ( nums, 0, 0,  nums.length-1);
     }
@@ -22,7 +22,7 @@ public class Recursion2 {
                   splitOdd10Aux(nums, sum1, sum2+nums[n], n-1);
     }
     
-    //groupSum5
+    //2. groupSum5
     public boolean groupSum5(int start, int[] nums, int target) {
         return groupSum5Aux (0,nums,target);
     }
@@ -42,7 +42,7 @@ public class Recursion2 {
                groupSum5Aux(start+1, nums, target);
     }
     
-    //splitArray
+    //3. splitArray
      public static boolean splitArray(int[] nums) {
         return splitAux(0, 0, 0, nums);
     }
@@ -54,6 +54,43 @@ public class Recursion2 {
             return splitAux(start + 1, sum1 + nums[start], sum2, nums)
                     || splitAux(start + 1, sum1, sum2 + nums[start], nums);
         }
+    }
+    
+    //4. groupNoAdj
+    public boolean groupNoAdj(int start, int[] nums, int target) {
+    return groupNoAdjAux(start, nums,target,false);
+    }
+
+    public boolean groupNoAdjAux(int start, int[] nums, int target, boolean chosen) {
+      if (chosen & start<=nums.length-1){
+        return groupNoAdjAux(start+1, nums, target, false); 
+      }
+
+      if (start==nums.length){
+        if (target ==0) return true;
+        else return false;
+      }
+
+      return groupNoAdjAux(start+1, nums, target-nums[start], true)||
+             groupNoAdjAux(start+1, nums, target, false);
+    }
+    
+    //5. split53 
+    public boolean split53(int[] nums) {
+      return split53Aux(0,0,0, nums);
+    }
+    public boolean split53Aux(int start, int sum1, int sum2, int[] nums) {
+      if (start<nums.length){
+        if (nums[start]%5==0) return split53Aux (start+1,sum1+nums[start], sum2, nums);
+        if (nums[start]%3==0 & nums[start]%5!=0) return split53Aux (start+1,sum1, sum2+nums[start], nums);
+      }
+
+      if (start == nums.length) {
+        return sum1 == sum2;
+      } else {
+        return split53Aux(start + 1, sum1 + nums[start], sum2, nums) ||
+                split53Aux(start + 1, sum1, sum2 + nums[start], nums);
+      }
     }
     
 }
