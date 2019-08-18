@@ -4,7 +4,7 @@ package laboratorio;
  *
  * @author Santiago Hidalgo Ocampo
  * @author Ana Gutierrez
- * @version Versión 1
+ * @version Version 1
  */
 public class Laboratorio {
 
