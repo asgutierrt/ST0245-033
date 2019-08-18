@@ -9,6 +9,11 @@ package codingbat_recursion;
 public class Recursion1 {
     
     //1. count7 
+    /**
+     * 
+     * @param n es el número al cual que le quiere contar las ocurrencias del 7
+     * @return La cantidad de ocurrencias del 7 en el número dado. 
+     */
     public int count7(int n) {
         if(n==0)  return 0;       //T(n)= c_1
 
