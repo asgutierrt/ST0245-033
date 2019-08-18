@@ -14,11 +14,8 @@ public class Recursion2 {
 
     public boolean splitOdd10Aux (int[] nums, int sum1, int sum2, int n) {
       if (n<0){
-        if (sum1%10==0 & sum2%2==1) return true;     //T(n)= c_1
-        else return false;
-      }
-      
-      else return splitOdd10Aux(nums, sum1+nums[n], sum2, n-1) ||   //T(n)= c_2 + T(n-1) + T(n-1)
+        return sum1%10==0 & sum2%2==1;
+      }else return splitOdd10Aux(nums, sum1+nums[n], sum2, n-1) ||   //T(n)= c_2 + T(n-1) + T(n-1)
                   splitOdd10Aux(nums, sum1, sum2+nums[n], n-1);      
     }
     
