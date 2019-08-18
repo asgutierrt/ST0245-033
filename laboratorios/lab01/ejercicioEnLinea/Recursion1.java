@@ -36,7 +36,12 @@ public class Recursion1 {
         else return countX(str.substring(1));
     }
     
-    //3. triangle 
+     /**
+     * 3. triangle 
+     * 
+     * @param rows es el número de filas que posee el triángulo
+     * @return El número total de bloques que posee el triagulo 
+     */
     public int triangle(int rows) {
         if(rows==1 || rows==0) return rows;   //T(n)= c_1
         else  return rows + triangle(rows-1);   //T(n)= c_2 + T(n-1)
