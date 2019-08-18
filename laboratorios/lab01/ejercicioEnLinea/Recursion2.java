@@ -74,11 +74,25 @@ public class Recursion2 {
                groupSum5Aux(start+1, nums, target);
     }
     
-    //3. splitArray
+    /**
+     * 3. splitArray
+     * 
+     * @param nums arreglo de enteros
+     * @return verdad o falsedad sobre la igualdad de la suma de dos grupos del arreglo
+     */
      public static boolean splitArray(int[] nums) {
         return splitAux(0, 0, 0, nums);
     }
-
+    
+    /**
+     * Método auxilar para splitArray
+     * 
+     * @param start es el indice para recorrer el arreglo
+     * @param sum1 es la suma de un subgrupo del arreglo
+     * @param sum2 es la suma de un subgrupo del arreglo
+     * @param nums es un arreglo de enteros
+     * @return  verdad o falsedad sobre la igualdad de la suma de dos grupos del arreglo
+     */
     public static boolean splitAux(int start, int sum1, int sum2, int[] nums) {
         if (start == nums.length) {
             return sum1 == sum2;
