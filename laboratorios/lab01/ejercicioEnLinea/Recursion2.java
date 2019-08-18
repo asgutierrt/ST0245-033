@@ -7,11 +7,28 @@ package codingbat_recursion;
  * @author sanhidalgoo
  */
 public class Recursion2 {
-    //1. splitOdd10 
+    //
+    
+     /**
+     * 1. splitOdd10 
+     *
+     * @param nums es un arreglo de enteros
+     * @return  verdad si es posible dividir los elementos del arreglo en dos grupos, 
+     * de modo que la suma de un grupo sea múltiplo de 10 y la suma del otro grupo sea impar
+     */
     public boolean splitOdd10(int[] nums) {
         return splitOdd10Aux ( nums, 0, 0,  nums.length-1);
     }
-
+    /**
+     * Método auxiliar splitOdd10 
+     *
+     * @param nums es un arreglo de enteros
+     * @param sum1 suma parcia2 de un grupó del arreglo
+     * @param sum2 suma parcial2 de un grupo del arreglo
+     * @param n longitud del arreglo-1
+     * @return verdad si es posible dividir los elementos del arreglo en dos grupos, 
+     * de modo que la suma de un grupo sea múltiplo de 10 y la suma del otro grupo sea impar
+     */
     public boolean splitOdd10Aux (int[] nums, int sum1, int sum2, int n) {
       if (n<0){
         return sum1%10==0 & sum2%2==1;
