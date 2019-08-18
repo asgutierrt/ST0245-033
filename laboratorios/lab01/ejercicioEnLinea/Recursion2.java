@@ -29,16 +29,17 @@ public class Recursion2 {
 
     public boolean groupSum5Aux(int start, int[] nums, int target) {
         if (start<nums.length-1){
-            if (nums[start]%5==0 & nums[start+1]!=1) return groupSum5Aux (start+1,nums,target-nums[start]);
-            if (nums[start]%5==0 & nums[start+1]==1) return groupSum5Aux (start+2,nums,target-nums[start]);
+            if (nums[start]%5==0 & nums[start+1]!=1) return groupSum5Aux (start+1,nums,target-nums[start]); //T(n)= c_1 + T(n-1)
+            if (nums[start]%5==0 & nums[start+1]==1) return groupSum5Aux (start+2,nums,target-nums[start]); //T(n)= c_1 + T(n-1)
         }
 
         if (start==nums.length){
-            if (target ==0) return true;
+            if (target ==0) return true;   //T(n)= c_2
             else return false;
         }
 
-        return groupSum5Aux(start+1, nums, target-nums[start])||
+        return groupSum5Aux(start+1, nums, target-nums[start])||  //T(n)= c_3 + T(n-1) + T(n-1)
+                                                                  //it does not executes this line and the one above (line 32-33) in the same recursion, only one does, so they must not be added
                groupSum5Aux(start+1, nums, target);
     }
     
