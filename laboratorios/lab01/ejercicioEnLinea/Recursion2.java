@@ -135,10 +135,27 @@ public class Recursion2 {
              groupNoAdjAux(start+1, nums, target, false);
     }
     
-    //5. split53 
+     /**
+     * 5. split53 
+     * 
+     * @param nums es in arreglo de enteros
+     * @return verdad o falsedad si dos subgrupos del arreglo suman lo mismo con 
+     *         la restricción dada
+     */
     public boolean split53(int[] nums) {
       return split53Aux(0,0,0, nums);
     }
+    
+    /**
+     * Método auxiliar para split53
+     * 
+     * @param start es el indice para recorrer el arreglo
+     * @param sum1 es la suma de un subgrupo1 del arreglo
+     * @param sum2 es la suma de un subgrupo2 del arreglo
+     * @param nums es un arreglo de enteros
+     * @return verdad o falsedad si dos subgrupos del arreglo suman lo mismo con 
+     *         la restricción dada
+     */
     public boolean split53Aux(int start, int sum1, int sum2, int[] nums) {
       if (start<nums.length){
         if (nums[start]%5==0) return split53Aux (start+1,sum1+nums[start], sum2, nums);
