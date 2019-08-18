@@ -36,11 +36,28 @@ public class Recursion2 {
                   splitOdd10Aux(nums, sum1, sum2+nums[n], n-1);      
     }
     
-    //2. groupSum5
+    
+    /**
+     * 2. groupSum5
+     * 
+     * @param start indice para recorrer el arreglo
+     * @param nums es un arreglo de enteros
+     * @param target es la suma objetivo
+     * @return la verdad o falsedad de la igualdad de la suma con la condición dada
+     */
     public boolean groupSum5(int start, int[] nums, int target) {
         return groupSum5Aux (0,nums,target);
     }
-
+    
+    /**
+     * Método auxiliar para groupSum5
+     * 
+     * @param start indice para recorrer el arreglo
+     * @param nums es un arreglo de enteros
+     * @param target es la suma objetivo
+     * @return la verdad o falsedad de la igualdad de la suma con la condición dada
+     *
+     */
     public boolean groupSum5Aux(int start, int[] nums, int target) {
         if (start<nums.length-1){
             if (nums[start]%5==0 & nums[start+1]!=1) return groupSum5Aux (start+1,nums,target-nums[start]); //T(n)= c_1 + T(n-1)
