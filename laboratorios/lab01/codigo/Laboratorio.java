@@ -42,6 +42,6 @@ public class Laboratorio {
         if (n == 2) {
             return 2;   //C_2
         }
-        return nRectangulos(n - 1) + nRectangulos(n - 2);  //T(n) = C_3 T(n-1) + T(n-2)
+        return nRectangulos(n - 1) + nRectangulos(n - 2);  //T(n) = C_3 + T(n-1) + T(n-2)
     }
 }
