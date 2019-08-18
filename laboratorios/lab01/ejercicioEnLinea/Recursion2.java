@@ -102,21 +102,35 @@ public class Recursion2 {
         }
     }
     
-    //4. groupNoAdj
+    /**
+     * 4. groupNoAdj
+     * 
+     * @param start es el índice para recorrer el arreglo
+     * @param nums es el arreglo de enteros
+     * @param target es la suma objetivo del subgrupo del arreglo
+     * @return verdad o falsedad si el arreglo tiene un subgrupo que sume el objetivo
+     *         con la restricción dada
+     */
     public boolean groupNoAdj(int start, int[] nums, int target) {
-    return groupNoAdjAux(start, nums,target,false);
+          return groupNoAdjAux(start, nums,target,false);
     }
-
+    
+    /**
+     * Método auxiliar para groupNoAdj
+     * 
+     * @param start es el índice para recorrer el arreglo
+     * @param nums es el arreglo de enteros
+     * @param target es la suma objetivo del subgrupo del arreglo
+     * @param chosen si se elige el elemento en la posición actual
+     * @return 
+     */
     public boolean groupNoAdjAux(int start, int[] nums, int target, boolean chosen) {
       if (chosen & start<=nums.length-1){
         return groupNoAdjAux(start+1, nums, target, false); 
       }
-
       if (start==nums.length){
-        if (target ==0) return true;
-        else return false;
+        return target ==0; 
       }
-
       return groupNoAdjAux(start+1, nums, target-nums[start], true)||
              groupNoAdjAux(start+1, nums, target, false);
     }
