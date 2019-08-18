@@ -47,7 +47,13 @@ public class Recursion1 {
         else  return rows + triangle(rows-1);   //T(n)= c_2 + T(n-1)
     }
     
-    //4. count8 
+     /**
+     * 4. count8 
+     * 
+     * @param n es un número entero no negativo
+     * @return el número de ocurrencias de '8' en el número con 
+     *          la restricción dada.
+     */
     public int count8(int n) {
         if(n<1)return 0;       //T(n)= c_1
         
