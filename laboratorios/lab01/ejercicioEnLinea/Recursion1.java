@@ -12,8 +12,8 @@ public class Recursion1 {
     /**
      * 1. count7 
      * 
-     * @param n es el número al cual que le quiere contar las ocurrencias del 7
-     * @return La cantidad de ocurrencias del 7 en el número dado. 
+     * @param n it is the number to which you want to count the occurrences of 7
+     * @return The number of occurrences of 7 in the given number. 
      */
     public int count7(int n) {
         if(n==0)  return 0;       //T(n)= c_1
@@ -25,8 +25,8 @@ public class Recursion1 {
    /**
      * 2. countX 
      * 
-     * @param str es una cadena de caracteres 
-     * @return La cantidad de ocurrencias de 'x' en la cadena dada
+     * @param str it is a string of characters
+     * @return The number of occurrences of 'x' in the given string
      */
     
     public int countX(String str) {
@@ -39,8 +39,8 @@ public class Recursion1 {
      /**
      * 3. triangle 
      * 
-     * @param rows es el número de filas que posee el triángulo
-     * @return El número total de bloques que posee el triagulo 
+     * @param rows is the number of rows in the triangle
+     * @return The total number of blocks that the triangle has 
      */
     public int triangle(int rows) {
         if(rows==1 || rows==0) return rows;   //T(n)= c_1
@@ -50,9 +50,9 @@ public class Recursion1 {
      /**
      * 4. count8 
      * 
-     * @param n es un número entero no negativo
-     * @return el número de ocurrencias de '8' en el número con 
-     *          la restricción dada.
+     * @param n is an non negative integer
+     * @return the number of occurrences of '8' in the number with
+     * the restriction given.
      */
     public int count8(int n) {
         if(n<1)return 0;       //T(n)= c_1
@@ -65,8 +65,8 @@ public class Recursion1 {
      /**
      * 5. sumDigits 
      * 
-     * @param n es un número cualquiera
-     * @return la suma de los digitos del número dado
+     * @param n is a random number
+     * @return the sum of the digits of the given number
      */
     public int sumDigits(int n) {
         if(n<10)return n;     //T(n)= c_1
