@@ -12,22 +12,22 @@ public class Recursion2 {
      /**
      * 1. splitOdd10 
      *
-     * @param nums es un arreglo de enteros
-     * @return  verdad si es posible dividir los elementos del arreglo en dos grupos, 
-     * de modo que la suma de un grupo sea múltiplo de 10 y la suma del otro grupo sea impar
+     * @param nums is an array of integers
+     * @return true if it is possible to divide the elements of the arrangement into two groups,
+     * so that the sum of one group is a multiple of 10 and the sum of the other group is odd
      */
     public boolean splitOdd10(int[] nums) {
         return splitOdd10Aux ( nums, 0, 0,  nums.length-1);
     }
     /**
-     * Método auxiliar splitOdd10 
+     * Auxiliary method for splitOdd10 
      *
-     * @param nums es un arreglo de enteros
-     * @param sum1 suma parcia2 de un grupó del arreglo
-     * @param sum2 suma parcial2 de un grupo del arreglo
-     * @param n longitud del arreglo-1
-     * @return verdad si es posible dividir los elementos del arreglo en dos grupos, 
-     * de modo que la suma de un grupo sea múltiplo de 10 y la suma del otro grupo sea impar
+     * @param nums is an array of integers
+     * @param sum1 partial sum of a group of the arrangement
+     * @param sum2 partial sum of a group of the arrangement
+     * @param n length of the array -1
+     * @return true if it is possible to divide the elements of the arrangement into two groups,
+     * so that the sum of one group is a multiple of 10 and the sum of the other group is odd
      */
     public boolean splitOdd10Aux (int[] nums, int sum1, int sum2, int n) {
       if (n<0){
@@ -40,22 +40,22 @@ public class Recursion2 {
     /**
      * 2. groupSum5
      * 
-     * @param start indice para recorrer el arreglo
-     * @param nums es un arreglo de enteros
-     * @param target es la suma objetivo
-     * @return la verdad o falsedad de la igualdad de la suma con la condición dada
+     * @param start index to go over the arrangement
+     * @param nums is an array of integers
+     * @param target is the goal sum
+     * @return the truth or falsity of the equality of the sum with the given condition
      */
     public boolean groupSum5(int start, int[] nums, int target) {
         return groupSum5Aux (0,nums,target);
     }
     
     /**
-     * Método auxiliar para groupSum5
+     * Auxiliary method for groupSum5
      * 
-     * @param start indice para recorrer el arreglo
-     * @param nums es un arreglo de enteros
-     * @param target es la suma objetivo
-     * @return la verdad o falsedad de la igualdad de la suma con la condición dada
+     * @param start index to go over the arrangement
+     * @param nums is an array of integers
+     * @param target is the goal sum
+     * @return the truth or falsity of the equality of the sum with the given condition
      *
      */
     public boolean groupSum5Aux(int start, int[] nums, int target) {
@@ -77,21 +77,21 @@ public class Recursion2 {
     /**
      * 3. splitArray
      * 
-     * @param nums arreglo de enteros
-     * @return verdad o falsedad sobre la igualdad de la suma de dos grupos del arreglo
+     * @param nums is an array of integers
+     * @return truth or falsehood about the equality of the sum of two arrangement groups
      */
      public static boolean splitArray(int[] nums) {
         return splitAux(0, 0, 0, nums);
     }
     
     /**
-     * Método auxilar para splitArray
+     * Auxiliary method for splitArray
      * 
-     * @param start es el indice para recorrer el arreglo
-     * @param sum1 es la suma de un subgrupo del arreglo
-     * @param sum2 es la suma de un subgrupo del arreglo
-     * @param nums es un arreglo de enteros
-     * @return  verdad o falsedad sobre la igualdad de la suma de dos grupos del arreglo
+     * @param start index to go over the arrangement
+     * @param sum1 is the sum of a subgroup of the array
+     * @param sum2 is the sum of a subgroup of the array
+     * @param nums is an array of integers
+     * @return truth or falsehood about the equality of the sum of two arrangement groups
      */
     public static boolean splitAux(int start, int sum1, int sum2, int[] nums) {
         if (start == nums.length) {
@@ -105,24 +105,25 @@ public class Recursion2 {
     /**
      * 4. groupNoAdj
      * 
-     * @param start es el índice para recorrer el arreglo
-     * @param nums es el arreglo de enteros
-     * @param target es la suma objetivo del subgrupo del arreglo
-     * @return verdad o falsedad si el arreglo tiene un subgrupo que sume el objetivo
-     *         con la restricción dada
+     * @param start index to go over the arrangement
+     * @param nums is an array of integers
+     * @param target is the target sum of the subgroup of the array
+     * @return true if the arrangement has a subgroup that sums up the objective
+     * with the given restriction
      */
     public boolean groupNoAdj(int start, int[] nums, int target) {
           return groupNoAdjAux(start, nums,target,false);
     }
     
     /**
-     * Método auxiliar para groupNoAdj
+     * Auxiliary method for groupNoAdj
      * 
-     * @param start es el índice para recorrer el arreglo
-     * @param nums es el arreglo de enteros
-     * @param target es la suma objetivo del subgrupo del arreglo
-     * @param chosen si se elige el elemento en la posición actual
-     * @return 
+     * @param start index to go over the arrangement
+     * @param nums is an array of integers
+     * @param target is the target sum of the subgroup of the array
+     * @param chosen true if the item in the current position is chosen
+     * @return true if the arrangement has a subgroup that sums up the objective
+     * with the given restriction
      */
     public boolean groupNoAdjAux(int start, int[] nums, int target, boolean chosen) {
       if (chosen & start<=nums.length-1){
@@ -138,23 +139,23 @@ public class Recursion2 {
      /**
      * 5. split53 
      * 
-     * @param nums es in arreglo de enteros
-     * @return verdad o falsedad si dos subgrupos del arreglo suman lo mismo con 
-     *         la restricción dada
+     * @param nums is an array of integers
+     * @return true if two subgroups of the arrangement add up to the same value following
+     * the restriction given
      */
     public boolean split53(int[] nums) {
       return split53Aux(0,0,0, nums);
     }
     
     /**
-     * Método auxiliar para split53
+     * Auxiliary method for split53
      * 
-     * @param start es el indice para recorrer el arreglo
-     * @param sum1 es la suma de un subgrupo1 del arreglo
-     * @param sum2 es la suma de un subgrupo2 del arreglo
-     * @param nums es un arreglo de enteros
-     * @return verdad o falsedad si dos subgrupos del arreglo suman lo mismo con 
-     *         la restricción dada
+     * @param start index to go over the arrangement
+     * @param sum1 is the sum of the subgroup 1 of the array
+     * @param sum2 is the sum of the subgroup 2 of the array
+     * @param nums is an array of integers
+     * @return true if two subgroups of the arrangement add up to the same value following
+     * the restriction given
      */
     public boolean split53Aux(int start, int sum1, int sum2, int[] nums) {
       if (start<nums.length){
