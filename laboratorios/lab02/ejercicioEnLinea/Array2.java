@@ -14,14 +14,14 @@ public class Array2 {
      * @return the number of even ints in the given array.
      */
     public static int countEvens(int[] nums) {
-        int cont = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] % 2 == 0) {
-                cont++;
+        int cont = 0;                               //C_1
+        for (int i = 0; i < nums.length; i++) {     // C_2*n
+            if (nums[i] % 2 == 0) {                 // C3_*n
+                cont++;                             // C_4*n
             }
         }
-        return cont;
-    }
+        return cont;                                // C_5
+    }                                             // T(n) = C1 + (C_2+C_3+C4)*n + C_5
 
     /**
      * 2. sum13
