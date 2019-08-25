@@ -33,7 +33,7 @@ public class Array2 {
      */
     public static int sum13(int[] nums) {
         int suma = 0;
-        for (int i = 0; i < nums.length; i++) {    //T(n) = n
+        for (int i = 0; i < nums.length; i++) {    //T(n) = n*c
             if (nums[i] == 13) {                   // T(n) = C1*n
                 i++;                               //  T(n) = C2*n
             } else {
@@ -50,7 +50,7 @@ public class Array2 {
      * @return true if the array contains no 1's and no 3's.
      */
     public static boolean lucky13(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {  //T(n) = n
+        for (int i = 0; i < nums.length; i++) {  //T(n) = n*c
             if (nums[i] == 3 || nums[i] == 1) {  //T(n) = C1*n
                 return false;                    // T(n) = C2*n
             }
@@ -67,7 +67,7 @@ public class Array2 {
     public static boolean no14(int[] nums) {
         boolean one = false;                     //T(n)=C1
         boolean two = false;                     //T(n) = C2
-        for (int i = 0; i < nums.length; i++) {    // T(n) = n
+        for (int i = 0; i < nums.length; i++) {    // T(n) = n*c
             if (nums[i] == 1) {                     // T(n) = n*C3
                 one = true;                           // T(n) = n*C4  
             }
@@ -85,14 +85,14 @@ public class Array2 {
      * @return  true if the array contains a 2 next to a 2 somewhere
      */
     public static boolean has22(int[] nums) {
-        if (nums.length == 2 && nums[0] == 2 && nums[1] == 2) {
-            return true;
+        if (nums.length == 2 && nums[0] == 2 && nums[1] == 2) {   //T(n) = C1
+            return true;                                          //T(n) = C2
         }
-        for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] == 2 && nums[i + 1] == 2) {
-                return true;
+        for (int i = 0; i < nums.length - 1; i++) {                 // T(n) = C3*n
+            if (nums[i] == 2 && nums[i + 1] == 2) {                 //T(n) = C4*n
+                return true;                                         //T(n) = C5*n
             }
         }
-        return false;
-    }
+        return false;                                                   //T(n) = C6
+    }                                                                  //T(n) = (C*n)+C1
 }
