@@ -10,9 +10,12 @@ public class Array3 {
 
     /**
      * 1. maxSpan
+     * 
+     * Consider the leftmost and righmost appearances of some value in an array.
+     * We'll say that the "span" is the number of elements between the two inclusive.  A single value has a span of 1
      *
      * @param nums is an array of integers
-     * @return
+     * @return  the largest span found in the given array.
      */
     public static int maxSpan(int[] nums) {
         if (nums.length > 0 && nums[0] != nums[nums.length - 1]) {
