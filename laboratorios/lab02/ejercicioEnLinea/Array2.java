@@ -49,7 +49,7 @@ public class Array2 {
      * @param nums is an array of integers
      * @return true if the array contains no 1's and no 3's.
      */
-    public boolean lucky13(int[] nums) {
+    public static boolean lucky13(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 3 || nums[i] == 1) {
                 return false;
@@ -64,7 +64,7 @@ public class Array2 {
      * @param nums is an array of integers
      * @return true if it contains no 1's or it contains no 4's
      */
-    public boolean no14(int[] nums) {
+    public static boolean no14(int[] nums) {
         boolean one = false;
         boolean two = false;
         for (int i = 0; i < nums.length; i++) {
@@ -84,7 +84,7 @@ public class Array2 {
      * @param nums is an array of integers
      * @return  true if the array contains a 2 next to a 2 somewhere
      */
-    public boolean has22(int[] nums) {
+    public static boolean has22(int[] nums) {
         if (nums.length == 2 && nums[0] == 2 && nums[1] == 2) {
             return true;
         }
