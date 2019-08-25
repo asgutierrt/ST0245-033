@@ -50,13 +50,13 @@ public class Array2 {
      * @return true if the array contains no 1's and no 3's.
      */
     public static boolean lucky13(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 3 || nums[i] == 1) {
-                return false;
+        for (int i = 0; i < nums.length; i++) {  //T(n) = n
+            if (nums[i] == 3 || nums[i] == 1) {  //T(n) = C1*n
+                return false;                    // T(n) = C2
             }
         }
-        return true;
-    }
+        return true;                              //T(n) = C3
+    }                                           //T(n) = (C1*n) + (C2+C3) = C1*n + C
 
     /**
      * 4. no14
