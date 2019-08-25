@@ -33,15 +33,15 @@ public class Array2 {
      */
     public static int sum13(int[] nums) {
         int suma = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 13) {
-                i++;
+        for (int i = 0; i < nums.length; i++) {    //T(n) = n
+            if (nums[i] == 13) {                   // T(n) = C1*n
+                i++;                               //  T(n) = C2*n
             } else {
-                suma += nums[i];
+                suma += nums[i];                    // T(n) = C3*n
             }
         }
-        return suma;
-    }
+        return suma;                                 // T(n) = C4
+    }                                               //T(n) = (C0*n)+C1
 
     /**
      * 3. lucky13
