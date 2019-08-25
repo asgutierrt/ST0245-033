@@ -14,7 +14,7 @@ public class Array2 {
      */
     public static int countEvens(int[] nums) {
         int cont = 0;
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) { // T(n) = n
             if (nums[i] % 2 == 0) {
                 cont++;
             }
