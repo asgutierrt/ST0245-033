@@ -52,7 +52,7 @@ public class Array2 {
     public static boolean lucky13(int[] nums) {
         for (int i = 0; i < nums.length; i++) {  //T(n) = n
             if (nums[i] == 3 || nums[i] == 1) {  //T(n) = C1*n
-                return false;                    // T(n) = C2
+                return false;                    // T(n) = C2*n
             }
         }
         return true;                              //T(n) = C3
@@ -65,18 +65,18 @@ public class Array2 {
      * @return true if it contains no 1's or it contains no 4's
      */
     public static boolean no14(int[] nums) {
-        boolean one = false;
-        boolean two = false;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 1) {
-                one = true;
+        boolean one = false;                     //T(n)=C1
+        boolean two = false;                     //T(n) = C2
+        for (int i = 0; i < nums.length; i++) {    // T(n) = n
+            if (nums[i] == 1) {                     // T(n) = n*C3
+                one = true;                           // T(n) = n*C4  
             }
-            if (nums[i] == 4) {
-                two = true;
+            if (nums[i] == 4) {                   // T(n) = n*C5
+                two = true;                    // T(n) = n*C6
             }
         }
-        return !(one && two);
-    }
+        return !(one && two);                   // T(n) = C7
+    }                                           // T(n) = (n*C) + C1
 
     /**
      * 5. has22
