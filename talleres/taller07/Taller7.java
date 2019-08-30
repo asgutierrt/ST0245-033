@@ -44,7 +44,7 @@ public class Taller7 {
      * @param index indice para recorrer los arreglos
      * @param lista1
      * @param lista2
-     * @return
+     * @return verdad si las listas son iguales
      */
     private static boolean comparar(int index, LinkedList<Integer> lista1, LinkedList<Integer> lista2){
         if(lista1.size()!=lista2.size()){
