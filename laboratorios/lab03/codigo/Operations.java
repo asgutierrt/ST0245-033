@@ -44,7 +44,7 @@ public class Operations {
      */
     public static LinkedList<String> read(String Filename) throws FileNotFoundException {
         LinkedList<String> informationLines = new LinkedList<>();
-        String ruta = "./Archivo/" + Filename + ".csv";
+        String ruta = "./archivo/" + Filename + ".csv";
         File file = new File(ruta);
         Scanner input = new Scanner(file);
 
