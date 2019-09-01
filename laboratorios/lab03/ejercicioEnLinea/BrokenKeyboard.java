@@ -13,7 +13,7 @@ public class BrokenKeyboard {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        String ruta = "./Archivo/Keyboard.txt";
+        String ruta = "./Keyboard.txt";
         File file = new File(ruta);
         Scanner input = new Scanner(file);
 
