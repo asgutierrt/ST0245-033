@@ -145,6 +145,11 @@ public class Operations {
         search(listStudent3, nameStudent);
     }
 
+     /**
+     * 
+     * @param listStudent
+     * @param nameStudent 
+     */
     public static void search(LinkedList<Student> listStudent, String nameStudent) {
         int tam = listStudent.size();
         for (int i = 0; i < tam; i++) {
@@ -159,6 +164,16 @@ public class Operations {
         }
     }
 
+    /**
+     * 
+     * Title: quitaDiacriticos
+     * Author: Jorge Salamanca
+     * Date: 21 June 2018
+     * Availability: https://es.stackoverflow.com/questions/31178/c%C3%B3mo-limpiar-string-de-tildes-en-java
+     * 
+     * @param s
+     * @return name without tildes
+     */
     public static String quitaDiacriticos(String s) {
         s = Normalizer.normalize(s, Normalizer.Form.NFD);
         s = s.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
