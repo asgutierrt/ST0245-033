@@ -26,6 +26,12 @@ public class BrokenKeyboard {
         }
     }
 
+    /**
+     * process the string according to the special commands
+     * 
+     * @param line
+     * @return processed line
+     */
     public static String process(String line) {
         LinkedList<Character> list = new LinkedList<>();
         String lineR = "";
