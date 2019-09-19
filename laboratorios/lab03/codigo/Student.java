@@ -12,6 +12,8 @@ public class Student {
 
     /**
      * 
+     * Constructor of student
+     *
      * @param name
      * @param course
      * @param semester
@@ -25,7 +27,9 @@ public class Student {
     }
 
     /**
-     * 
+     *
+     * return name of student
+     *
      * @return name
      */
     public String getName() {
@@ -33,7 +37,7 @@ public class Student {
     }
 
     /**
-     * 
+     *  set student name
      * @param name 
      */
     public void setName(String name) {
@@ -42,6 +46,8 @@ public class Student {
 
     /**
      * 
+     * return student course
+     *
      * @return course
      */
     public String getCourse() {
@@ -50,6 +56,8 @@ public class Student {
 
     /**
      * 
+     * set student course
+     *
      * @param course 
      */
     public void setCourse(String course) {
@@ -58,6 +66,8 @@ public class Student {
 
     /**
      * 
+     * return student semester
+     *
      * @return semester
      */
     public String getSemester() {
@@ -66,6 +76,8 @@ public class Student {
 
     /**
      * 
+     * set student semester
+     *
      * @param semester 
      */
     public void setSemester(String semester) {
@@ -74,6 +86,8 @@ public class Student {
 
     /**
      * 
+     * return student grade
+     *
      * @return grade
      */
     public float getGrade() {
@@ -82,12 +96,18 @@ public class Student {
 
     /**
      * 
+     * set student grade
+     *
      * @param grade 
      */
     public void setGrade(float grade) {
         this.grade = grade;
     }
-
+    
+    /**
+     * 
+     * @return student information
+     */
     @Override
     public String toString() {
         return "Estudiante{" + "name=" + name + ", course=" + course + ", semester=" + semester + ", grade=" + grade + '}';
