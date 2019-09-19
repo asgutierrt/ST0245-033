@@ -14,6 +14,12 @@ import java.util.Scanner;
  */
 public class Menu {
 
+    /**
+     *
+     * request type of inquiry
+     *
+     * @throws FileNotFoundException
+     */
     public static void tipoConsulta() throws FileNotFoundException {
         System.out.println("********************************************************************************************");
         System.out.println("- Consulta 1: ");
@@ -35,6 +41,8 @@ public class Menu {
 
     /**
      *
+     * Interact with the user in the query type request
+     *
      * @return option
      */
     public static int solicitarTipoConsulta() {
@@ -54,7 +62,13 @@ public class Menu {
         }
         return 0;
     }
-
+    
+    /**
+     *
+     * Request query options 1
+     *
+     * @throws FileNotFoundException
+     */
     public static void menuConsulta1() throws FileNotFoundException {
         System.out.println("\nCursos disponibles: ");
         System.out.println(" 1. Fundamentos de Programación");
@@ -70,7 +84,9 @@ public class Menu {
     }
 
     /**
-     * 
+     *
+     * Request courses
+     *
      * @return course
      */
     public static int solicitarCurso() {
@@ -93,6 +109,8 @@ public class Menu {
 
     /**
      * 
+     * Request semester
+     *
      * @return semester
      */
     public static int requestSemester() {
@@ -115,8 +133,10 @@ public class Menu {
     }
 
     /**
-     * 
-     * @throws FileNotFoundException 
+     *
+     * Request query menu options 2
+     *
+     * @throws FileNotFoundException
      */
     public static void menuConsulta2() throws FileNotFoundException {
         Scanner input = new Scanner(System.in);
@@ -127,4 +147,5 @@ public class Menu {
         String semesterS = Integer.toString(semester);
         Operations.printCourses(name, semesterS);
     }
+    
 }
