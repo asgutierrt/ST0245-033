@@ -15,6 +15,7 @@ import java.util.Scanner;
 public class Operations {
 
     /**
+     * Determine which file to read
      *
      * @param course
      * @return Students of the course
@@ -36,7 +37,8 @@ public class Operations {
         return listStudents;
     }
 
-    /**
+   /**
+     * access the file and read it
      *
      * @param Filename
      * @return basic information
@@ -58,7 +60,9 @@ public class Operations {
         return informationLines;
     }
 
-    /**
+   /**
+     *
+     * Convert / split data to be handled more easily
      *
      * @param list
      * @return list of Students
@@ -91,6 +95,7 @@ public class Operations {
     }
 
     /**
+     * Remove repeated students
      *
      * @param listStudent
      * @return list of students purify
@@ -108,7 +113,10 @@ public class Operations {
         return listStudent;
     }
 
+
     /**
+     *
+     * Print the request in query 1
      *
      * @param listStudent
      * @param semester
@@ -131,6 +139,8 @@ public class Operations {
 
     /**
      *
+     * Print a student's courses
+     *
      * @param nameStudent
      * @param semester
      * @throws FileNotFoundException
@@ -146,9 +156,11 @@ public class Operations {
     }
 
      /**
-     * 
+     *
+     * Search if a student is in a course
+     *
      * @param listStudent
-     * @param nameStudent 
+     * @param nameStudent
      */
     public static void search(LinkedList<Student> listStudent, String nameStudent) {
         int tam = listStudent.size();
