@@ -20,8 +20,8 @@ public class Blocks {
             stacks[i] = new Stack<>();
             stacks[i].push(i);
         }
-        System.out.println(Arrays.toString(stacks));
-        // System.out.println("Digite comando: ");
+        System.out.println(Arrays.toString(stacks)); //Stack
+      
         String command = "";
         int c = 0;
         do {
@@ -72,20 +72,15 @@ public class Blocks {
      * @return stacks processed after a command
      */
     public static Stack<Integer>[] procesar(Stack<Integer>[] stacks, int option1, int option2, int a, int b) {
-
+        //Command move a onto b
         if (option1 == 1 && option2 == 1) {
             return p1(stacks, a, b);
         }
-
+        //Command move a over b
         if (option1 == 1 && option2 == 2) {
             return p2(stacks, a, b);
         }
-
-        if (option1 == 2 && option2 == 1) {
-            //Comando no definido bien en el problema, no hay ejemplos de salida 
-            //con este comando
-        }
-
+        //Command pile a over b
         if (option1 == 2 && option2 == 2) {
             return p4(stacks, a, b);
         }
