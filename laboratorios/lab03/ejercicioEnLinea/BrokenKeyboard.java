@@ -17,7 +17,7 @@ public class BrokenKeyboard {
         File file = new File(ruta);
         Scanner input = new Scanner(file);
 
-        int cont = 0; //Contador para determinar cantidad de datos
+        int cont = 0; //counter to determine amount of data
 
         while (input.hasNext()) {
             String line = input.nextLine();
