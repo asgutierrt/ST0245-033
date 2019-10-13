@@ -28,10 +28,6 @@ public class Operations {
         System.out.println("AVAILABLE COMMANDS: ");
         System.out.println("List directories and files given a path: ");
         System.out.println("    ls <PATH>" + "  (If the name of a directory or file has spaces, change the space to '?')");
-       // System.out.println("List files and directories smaller than one size given a path: ");
-//        System.out.println("    lsl <PATH> <SIZE IN K>");
-//        System.out.println("List files and directories larger than a given path: ");
-//        System.out.println("    lsm <PATH> <SIZE IN K>");
 
         //
         System.out.print("Type command: ");
