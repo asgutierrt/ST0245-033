@@ -45,6 +45,9 @@ public class DigraphAL extends Graph {
 
     /**
      *
+     * Code adapted from Java2Blog
+     * Available: https://java2blog.com/breadth-first-search-in-java/
+     *
      * @param initialNode
      * @param finalNode
      * @return true if two nodes are connected
