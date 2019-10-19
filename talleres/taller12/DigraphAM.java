@@ -75,7 +75,8 @@ public class DigraphAM extends Digraph {
         return graph[source][destination];
     }
 
-    boolean dfs(Graph g, int a, boolean[] marked, int b) {
+    // Código adaptado del Profesor (Mauricio Toro)
+    public boolean dfs(Graph g, int a, boolean[] marked, int b) {
         marked[a] = true; //Se recorre el primer nodo, source
 
         if (a == b) {
