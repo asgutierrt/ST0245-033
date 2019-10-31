@@ -332,11 +332,11 @@ def choose_data(test_data, portion):
 
 # this method builds a base tree with half the data in the set and uses it to classify the rest of the data
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-data, header = read_file('/home/gedeon/PycharmProjects/Datos1/source/dataSet4.txt')
+data, header = read_file('dataSet1txt')
 
 #@profile
 def main():
-    data, header = read_file('/home/gedeon/PycharmProjects/Datos1/source/dataSet4.txt')
+    data, header = read_file('dataSet1txt')
     training_data = data
     my_tree = build_tree(training_data)
     questions = []
