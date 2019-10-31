@@ -1,5 +1,11 @@
+# Authors: Ana Sofia Gutiérrez Tejada - Santiago Hidalgo Ocampo
+# Version: 2
 
-# coding: utf-8
+# Authors note: The following code was an adaptation of the code implemented in the video 
+# "Let’s Write a Decision Tree Classifier from Scratch - Machine Learning Recipes # 8" of the Google Developers channel.
+# The source code of this implementation can be obtained at GitHub, 
+# its URL is: https://github.com/random-forests/tutorials/blob/master/decision_tree.py
+# 
 
 # In[1]:
 
